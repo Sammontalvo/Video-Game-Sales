@@ -64,6 +64,8 @@ CS_Platform$Platform_4<-NULL
 CS_Platform$Platform_5<-NULL
 View(CS_Platform)
 
+write.csv(CS_Platform,'TidyCS_Platform.csv') #stores CSV file to desktop
+
 #average global sales by Year and storing result in a new data frame 
 Global_SalesAVGbyYear<-aggregate(Global_Sales~Year,df,mean)
 head(Global_SalesAVGbyYear) #view the new structure of the data set
@@ -98,6 +100,8 @@ TS_Year$Year_3<-NULL
 TS_Year$Year_4<-NULL
 TS_Year$Year_5<-NULL
 View(TS_Year)
+
+write.csv(TS_Year,'TidyTS_Year.csv') #stores CSV file to desktop
 
 #average global sales by genre and storing result in a new data frame 
 Global_SalesAVGbyGenre<-aggregate(Global_Sales~Genre,df,mean)
@@ -135,6 +139,8 @@ CS_Genre$Genre_4<-NULL
 CS_Genre$Genre_5<-NULL
 View(CS_Genre)
 
+write.csv(CS_Genre,'TidyCS_Genre.csv') #stores CSV file to desktop
+
 #average global sales by publisher and storing result in a new data frame 
 Global_SalesAVGbyPublisher<-aggregate(Global_Sales~Publisher,df,mean)
 head(Global_SalesAVGbyPublisher) #view the new structure of the data set
@@ -170,6 +176,8 @@ CS_Publisher$Publisher_4<-NULL
 CS_Publisher$Publisher_5<-NULL
 View(CS_Publisher)
 
+write.csv(CS_Publisher,'TidyCS_Publisher.csv') #stores CSV file to desktop
+
 #new TIDY data set for names of games
 CS_Name<-df
 CS_Name$Platform<-NULL
@@ -178,6 +186,7 @@ CS_Name$Year<-NULL
 CS_Name$Publisher<-NULL
 View(CS_Name)
 
+write.csv(CS_Name,'TidyCS_Name.csv') #stores CSV file to desktop
 
 ##VISUAL ANALYSIS USING GGPLOT2##
 library(ggplot2)
